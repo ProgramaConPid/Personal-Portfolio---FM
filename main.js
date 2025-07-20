@@ -6,68 +6,9 @@ window.addEventListener("load", () => {
     loader.style.opacity = "0";
     setTimeout(() => {
       loader.style.display = "none";
-      iniciarParticulas(); // ✅ iniciar partículas después
     }, 1500);
-  } else {
-    iniciarParticulas(); // fallback
-  }
+  } 
 });
-
-// Función para cargar partículas
-function iniciarParticulas() {
-  tsParticles.load("tsparticles", {
-    particles: {
-      number: {
-        value: 80,
-        density: {
-          enable: true,
-          area: 800,
-        },
-      },
-      color: {
-        value: "#fff",
-      },
-      shape: {
-        type: "circle",
-      },
-      opacity: {
-        value: 0.5,
-      },
-      size: {
-        value: 3,
-      },
-      links: {
-        enable: true,
-        distance: 150,
-        color: "#ffffff",
-        opacity: 0.4,
-        width: 1,
-      },
-      move: {
-        enable: true,
-        speed: 2,
-        direction: "none",
-        outMode: "bounce",
-      },
-    },
-    interactivity: {
-      events: {
-        onhover: {
-          enable: true,
-          mode: "repulse",
-        },
-      },
-      modes: {
-        repulse: {
-          distance: 100,
-        },
-      },
-    },
-    background: {
-      color: "#0d0d0d",
-    },
-  });
-}
 
 // Elements
 const hamburguerMenu = document.querySelector("#hamburguer__menu");
