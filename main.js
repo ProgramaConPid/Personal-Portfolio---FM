@@ -1,5 +1,6 @@
+import showParticles from "./js/particlesConfig.js";
+
 // Loader hide on page load
-// Loader hide on page load + iniciar partículas
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
   if (loader) {
@@ -35,13 +36,13 @@ const errorMessages = document.getElementsByClassName("errorMessage");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-
+  
   const inputName = document.getElementById("name").value.trim();
   const inputEmail = document.getElementById("email").value.trim();
   const regEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
+  
   let hasErrors = false;
-
+  
   if (!inputName) {
     errorMessages[0].textContent = "Debes ingresar un nombre valido";
     errorMessages[0].classList.add("errorMessage");
@@ -49,7 +50,7 @@ form.addEventListener("submit", (e) => {
   } else {
     errorMessages[0].style.display = "none";
   }
-
+  
   if (!inputEmail || !regEx.test(inputEmail)) {
     errorMessages[1].textContent = "Debes ingresar un email valido";
     errorMessages[1].classList.add("errorMessage");
@@ -57,14 +58,17 @@ form.addEventListener("submit", (e) => {
   } else {
     errorMessages[1].style.display = "none";
   }
-
+  
   if (hasErrors) return;
-
+  
   Swal.fire({
     title: "Exito!",
     text: "El formulario ha sido enviado con exito!, pronto estaremos en contacto contigo.",
     icon: "success",
   });
-
+  
   form.reset();
 });
+
+
+showParticles()

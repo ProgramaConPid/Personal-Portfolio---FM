@@ -48,6 +48,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
+    <!-- CDN AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Portfolio Web | Felipe Marin</title>
   </head>
   <body>
@@ -62,6 +64,8 @@
       <div class="loader__text">Felipe Marin Portfolio</div>
     </div>
     <!-- Loader End -->
+
+    <div id="particles-js"></div>
 
     <!-- Section Header -->
     <header class="header">
@@ -113,27 +117,63 @@
 
       <!-- Skills List -->
       <ul class="skills__list">
-        <li class="skill">
+        <li
+          class="skill"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="200"
+          data-aos-offset="0"
+        >
           <img src="./imgs/html-5.png" alt="Icono HTML5" />
           HTML
         </li>
-        <li class="skill">
+        <li
+          class="skill"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="200"
+          data-aos-offset="0"
+        >
           <img src="./imgs/css-3.png" alt="Icono CSS3" />
           CSS
         </li>
-        <li class="skill">
+        <li
+          class="skill"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="200"
+          data-aos-offset="0"
+        >
           <img src="./imgs/logo-js.png" alt="Icono JavaScript" />
           JavaScript
         </li>
-        <li class="skill">
+        <li
+          class="skill"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="200"
+          data-aos-offset="0"
+        >
           <img src="./imgs/logo-python.png" alt="Icono Python" />
           Python
         </li>
-        <li class="skill">
+        <li
+          class="skill"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="200"
+          data-aos-offset="0"
+        >
           <img src="./imgs/logo-git.png" alt="Icono Git" />
           Git
         </li>
-        <li class="skill">
+        <li
+          class="skill"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="200"
+          data-aos-offset="0"
+        >
           <img src="./imgs/github.png" alt="Icono GitHub" />
           GitHub
         </li>
@@ -368,7 +408,7 @@
 
       <!-- Contact Info -->
       <div class="container__contact">
-        <div class="contact__info">
+        <div class="contact__info" data-aos="zoom-out-right">
           <h2 class="contact__info--title">Getting in touch is too easy!</h2>
 
           <p class="contact__info--addres">
@@ -404,7 +444,7 @@
         </div>
 
         <!-- Form - Step 10 (Contact Form) -->
-        <div class="contact__form">
+        <div class="contact__form" data-aos="zoom-out-left">
           <form action="#" method="post" id="form">
             <div class="form__group">
               <input
@@ -442,8 +482,15 @@
     </footer>
 
     <!-- JavaScript File -->
-    <script src="./main.js"></script>
+    <script type="module" src="./main.js"></script>
     <!-- CDN Sweet Alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Particles JS File -->
+     <script src="./js/particles.min.js"></script>
+    <!-- CDN AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
