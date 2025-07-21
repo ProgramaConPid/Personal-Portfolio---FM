@@ -35,39 +35,30 @@ const form = document.getElementById("form");
 const errorMessages = document.getElementsByClassName("errorMessage");
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  
   const inputName = document.getElementById("name").value.trim();
   const inputEmail = document.getElementById("email").value.trim();
   const regEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  
+
   let hasErrors = false;
-  
+
   if (!inputName) {
-    errorMessages[0].textContent = "Debes ingresar un nombre valido";
-    errorMessages[0].classList.add("errorMessage");
+    errorMessages[0].textContent = "Debes ingresar un nombre válido";
     hasErrors = true;
   } else {
-    errorMessages[0].style.display = "none";
+    errorMessages[0].textContent = "";
   }
-  
+
   if (!inputEmail || !regEx.test(inputEmail)) {
-    errorMessages[1].textContent = "Debes ingresar un email valido";
-    errorMessages[1].classList.add("errorMessage");
+    errorMessages[1].textContent = "Debes ingresar un email válido";
     hasErrors = true;
   } else {
-    errorMessages[1].style.display = "none";
+    errorMessages[1].textContent = "";
   }
-  
-  if (hasErrors) return;
-  
-  Swal.fire({
-    title: "Exito!",
-    text: "El formulario ha sido enviado con exito!, pronto estaremos en contacto contigo.",
-    icon: "success",
-  });
-  
-  form.reset();
+
+  if (hasErrors) {
+    e.preventDefault();
+    return;
+  }
 });
 
 

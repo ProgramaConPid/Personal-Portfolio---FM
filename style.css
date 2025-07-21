@@ -47,7 +47,7 @@ section {
   padding: 120px 0;
 }
 
-textarea {
+input, textarea {
   font-family: var(--font-montserrat);
   resize: none;
 }
@@ -632,7 +632,7 @@ form .form__group {
 .form__group input,
 .form__group textarea {
   font-size: 18px;
-  color: var(--white);
+  color: var(--soft-blue);
   padding: 20px;
   background-color: transparent;
   border: 1px solid var(--soft-blue);
@@ -653,8 +653,8 @@ form input[type="submit"] {
   background-color: var(--soft-blue);
   color: var(--soft-black);
   display: inline-block;
-  font-size: 1.3rem;
-  padding: 20px 30px;
+  font-size: 1rem;
+  padding: 15px 30px;
   place-self: end;
   border-radius: 0.2rem;
   border: 1px solid var(--soft-blue);

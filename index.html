@@ -1,4 +1,3 @@
-<!-- Step 2 (Basic HTML Structure) -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -90,7 +89,6 @@
       <!-- Section About Me -->
       <section class="about__me container" id="about__me">
         <div class="about__me--texts">
-          <!-- Step 3 (Main Page Title) -->
           <h1 class="about__me--title">
             Frontend Developer & <span>UI Designer</span>
           </h1>
@@ -195,7 +193,7 @@
 
       <!-- Projects -->
       <div class="container__projects">
-        <div class="book box">
+        <div class="book box" data-aos="fade-down-right" data-aos-delay="200">
           <div class="book__content">
             <h3 class="book__content--title">Project Description</h3>
 
@@ -229,7 +227,7 @@
           </div>
         </div>
 
-        <div class="book box">
+        <div class="book box" data-aos="flip-up" data-aos-delay="200">
           <div class="book__content">
             <h3 class="book__content--title">Project Description</h3>
 
@@ -264,7 +262,7 @@
           </div>
         </div>
 
-        <div class="book box">
+        <div class="book box" data-aos="fade-down-left" data-aos-delay="200">
           <div class="book__content">
             <h3 class="book__content--title">Project Description</h3>
 
@@ -299,7 +297,7 @@
           </div>
         </div>
 
-        <div class="book box">
+        <div class="book box" data-aos="fade-up-right" data-aos-delay="200">
           <div class="book__content">
             <h3 class="book__content--title">Project Description</h3>
 
@@ -332,7 +330,7 @@
           </div>
         </div>
 
-        <div class="book box">
+        <div class="book box" data-aos="flip-down" data-aos-delay="200">
           <div class="book__content">
             <h3 class="book__content--title">Project Description</h3>
 
@@ -366,7 +364,7 @@
           </div>
         </div>
 
-        <div class="book box">
+        <div class="book box" data-aos="fade-up-left" data-aos-delay="200">
           <div class="book__content">
             <h3 class="book__content--title">Project Description</h3>
 
@@ -426,26 +424,28 @@
             juanfelipemm2004@gmail.com
           </a>
 
-          <!-- Social Media - Step 11 (Social Media Links) -->
           <div class="contact__info--social-media">
-            <a href="https://facebook.com/" target="_blank">
+            <a href="https://www.facebook.com/juanfelipe.marinmolina.39/" target="_blank">
               <i class="bi bi-facebook"></i>
             </a>
-            <a href="https://instagram.com/" target="_blank">
+            <a href="https://www.instagram.com/_felipemarin02/" target="_blank">
               <i class="bi bi-instagram"></i>
             </a>
             <a href="https://twitter.com/" target="_blank">
               <i class="bi bi-twitter"></i>
             </a>
-            <a href="https://tiktok.com/" target="_blank">
+            <a href="https://www.tiktok.com/@programaconpid" target="_blank">
               <i class="bi bi-tiktok"></i>
             </a>
           </div>
         </div>
 
-        <!-- Form - Step 10 (Contact Form) -->
         <div class="contact__form" data-aos="zoom-out-left">
-          <form action="#" method="post" id="form">
+          <form
+            action="https://formsubmit.co/juanfelipemm2004@gmail.com"
+            method="post"
+            id="form"
+          >
             <div class="form__group">
               <input
                 type="text"
@@ -470,8 +470,13 @@
                 placeholder="Write your message... (Optional)"
                 id="message"
               ></textarea>
+
             </div>
+
             <input type="submit" value="Enviar formulario" />
+
+            <input type="hidden" name="_next" value="http://127.0.0.1:5502/index.html">
+            <input type="hidden" name="_captcha" value="false">
           </form>
         </div>
       </div>
@@ -486,7 +491,7 @@
     <!-- CDN Sweet Alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Particles JS File -->
-     <script src="./js/particles.min.js"></script>
+    <script src="./js/particles.min.js"></script>
     <!-- CDN AOS Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
