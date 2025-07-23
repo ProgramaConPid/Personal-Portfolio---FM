@@ -64,6 +64,7 @@
     </div>
     <!-- Loader End -->
 
+    <!-- Particles Efect -->
     <div id="particles-js"></div>
 
     <!-- Section Header -->
@@ -73,16 +74,22 @@
           <div class="nav__logo">
             <h2 class="nav__logo--text">Felipe Marin</h2>
           </div>
-
+          
           <i class="bi bi-list" id="hamburguer__menu"></i>
-
+          
           <!-- Navigation Menu -->
-          <ul class="nav__links">
-            <li class="nav__link"><a href="#about__me">About Me</a></li>
-            <li class="nav__link"><a href="#skills">Skills</a></li>
-            <li class="nav__link"><a href="#projects">Projects</a></li>
-            <li class="nav__link"><a href="#contact">Contact</a></li>
-          </ul>
+          <div class="right__nav">
+            <ul class="nav__links">
+              <li class="nav__link"><a id="nav__link" href="#about__me">About Me</a></li>
+              <li class="nav__link"><a id="nav__link" href="#skills">Skills</a></li>
+              <li class="nav__link"><a id="nav__link" href="#projects">Projects</a></li>
+              <li class="nav__link"><a id="nav__link" href="#contact">Contact</a></li>
+              <li>
+              </li>
+            </ul>
+  
+            <div class="icon__container" id="icon__theme"></div>
+          </div>
         </div>
       </nav>
 
@@ -407,7 +414,7 @@
       <!-- Contact Info -->
       <div class="container__contact">
         <div class="contact__info" data-aos="zoom-out-right">
-          <h2 class="contact__info--title">Getting in touch is too easy!</h2>
+          <h2 class="contact__info--title title">Getting in touch is too easy!</h2>
 
           <p class="contact__info--addres">
             Street 48C Sur #39a - 165,
@@ -425,16 +432,16 @@
           </a>
 
           <div class="contact__info--social-media">
-            <a href="https://www.facebook.com/juanfelipe.marinmolina.39/" target="_blank">
+            <a class="contact__link" href="https://www.facebook.com/juanfelipe.marinmolina.39/" target="_blank">
               <i class="bi bi-facebook"></i>
             </a>
-            <a href="https://www.instagram.com/_felipemarin02/" target="_blank">
+            <a class="contact__link" href="https://www.instagram.com/_felipemarin02/" target="_blank">
               <i class="bi bi-instagram"></i>
             </a>
-            <a href="https://twitter.com/" target="_blank">
+            <a class="contact__link" href="https://twitter.com/" target="_blank">
               <i class="bi bi-twitter"></i>
             </a>
-            <a href="https://www.tiktok.com/@programaconpid" target="_blank">
+            <a class="contact__link" href="https://www.tiktok.com/@programaconpid" target="_blank">
               <i class="bi bi-tiktok"></i>
             </a>
           </div>
@@ -452,6 +459,7 @@
                 name="name"
                 placeholder="Your Name..."
                 id="name"
+                class="input__field"
               />
               <p class="errorMessage"></p>
 
@@ -460,6 +468,7 @@
                 name="email"
                 placeholder="Your Email..."
                 id="email"
+                class="input__field"
               />
               <p class="errorMessage"></p>
 
@@ -473,7 +482,7 @@
 
             </div>
 
-            <input type="submit" value="Enviar formulario" />
+            <input id="input__submit" type="submit" value="Enviar formulario" />
 
             <input type="hidden" name="_next" value="http://127.0.0.1:5502/index.html">
             <input type="hidden" name="_captcha" value="false">

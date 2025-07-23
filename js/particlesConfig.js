@@ -1,4 +1,4 @@
-export default function showParticles() {
+export default function showParticlesDarkMode() {
   particlesJS({
     particles: {
       number: {

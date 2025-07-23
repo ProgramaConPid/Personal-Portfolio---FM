@@ -33,6 +33,13 @@ html {
 
 body {
   background-color: var(--soft-black);
+  color: var(--white);
+  transition: 500ms;
+}
+
+body.light__mode {
+  background-color: var(--white);
+  color: var(--soft-black);
 }
 
 #particles-js {
@@ -62,6 +69,16 @@ input, textarea {
   margin: 0 auto;
 }
 
+.icon__container {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  transition: 500ms ease;
+}
+
+
 /* ---------- */
 
 /* NAV STYLES */
@@ -87,10 +104,21 @@ input, textarea {
   border-bottom: 1px solid var(--grey);
 }
 
+.navbar.light {
+  background-color: var(--white);
+}
+
 .navbar__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.right__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .nav__logo .nav__logo--text {
@@ -98,6 +126,10 @@ input, textarea {
   font-size: clamp(16px, 2vw, 22px);
   letter-spacing: 2px;
   font-style: italic;
+}
+
+.nav__logo .nav__logo--text.dark {
+  color: var(--soft-black);
 }
 
 #hamburguer__menu {
@@ -140,6 +172,10 @@ input, textarea {
   color: var(--white);
   font-size: clamp(16px, 2vw, 22px);
   font-weight: 600;
+  transition: 500ms ease;
+}
+.nav__links > li a.dark {
+  color: var(--soft-black);
 }
 
 /* --------------------- */
@@ -162,6 +198,11 @@ input, textarea {
 
 .about__me--title {
   font-size: clamp(30px, 7vw, 60px);
+  transition: 500ms ease;
+}
+
+.about__me--title.dark {
+  color: var(--soft-black);
 }
 
 .about__me--title span {
@@ -290,6 +331,12 @@ input, textarea {
   padding-bottom: 10px;
   position: relative;
   overflow: hidden;
+  color: var(--white);
+  transition: 500ms ease;
+}
+
+.title.dark {
+  color: var(--soft-black);
 }
 
 .title::before {
@@ -571,6 +618,17 @@ input, textarea {
   font-size: clamp(20px, 6vw, 40px);
 }
 
+.contact__info--title::before {
+  content: "";
+  width: 0;
+  height: 0;
+  background-color: transparent;
+}
+
+.contact__info .contact__info--title.dark {
+  color: var(--soft-black);
+}
+
 .contact__info p,
 .contact__info a {
   font-size: clamp(17px, 4vw, 22px);
@@ -609,6 +667,14 @@ form {
   transition: 400ms ease;
 }
 
+.contact__info--social-media a.dark {
+  border-color: var(--soft-black);
+}
+
+.contact__info--social-media a.dark i {
+  color: var(--soft-black);
+}
+
 .contact__info--social-media a:hover {
   background-color: var(--white);
   border: 1px solid transparent;
@@ -616,6 +682,14 @@ form {
 
 .contact__info--social-media a:hover i {
   color: var(--soft-black);
+}
+
+.contact__info--social-media a.dark:hover {
+  background-color: var(--soft-black);
+}
+
+.contact__info--social-media a.dark:hover i {
+  color: var(--white);
 }
 
 .contact__info--social-media i {
@@ -638,10 +712,22 @@ form .form__group {
   border: 1px solid var(--soft-blue);
 }
 
+.form__group .input__field.dark,
+.form__group #message.dark {
+  color: var(--soft-black);
+  border-color: var(--soft-black);
+}
+
+
 .form__group input::placeholder,
 .form__group textarea::placeholder {
   color: var(--soft-blue);
   font-size: 18px;
+}
+
+.form__group .input__field.dark::placeholder,
+.form__group #message.dark::placeholder {
+  color: var(--soft-black);
 }
 
 .form__group input:focus,
@@ -664,6 +750,12 @@ form input[type="submit"] {
   transition: 300ms ease;
 }
 
+#input__submit.dark {
+  color: var(--white);
+  background-color: var(--soft-black);
+  border-color: transparent;
+}
+
 form input[type="submit"]:hover {
   background-color: var(--white);
   border: 1px solid transparent;
@@ -677,16 +769,24 @@ form input[type="submit"]:hover {
 
 .footer {
   background-color: var(--white);
+  color: var(--soft-black);
   margin-top: 3rem;
   padding: 20px;
   display: grid;
   place-items: center;
   opacity: 0.7;
+  transition: all 500ms ease;
+}
+
+.footer.dark {
+  background-color: var(--soft-black);
+  color: var(--white);
 }
 
 .footer span {
   letter-spacing: 1px;
 }
+
 
 /* ------------- */
 
