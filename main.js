@@ -104,6 +104,8 @@ const form = document.getElementById("form");
 const errorMessages = document.getElementsByClassName("errorMessage");
 
 form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
   const inputName = document.getElementById("name").value.trim();
   const inputEmail = document.getElementById("email").value.trim();
   const regEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -125,7 +127,14 @@ form.addEventListener("submit", (e) => {
   }
 
   if (hasErrors) {
-    e.preventDefault();
     return;
-  }
+  } 
+  
+  Swal.fire({
+  title: "Form sent successfully!",
+  text: "I will get back to you very soon.",
+  icon: "success"
+  });
+  
+  form.reset();
 });

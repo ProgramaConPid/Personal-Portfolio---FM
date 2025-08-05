@@ -1,0 +1,23 @@
+{
+  "name": "personal-portfolio---fm",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene el código fuente de mi portafolio web personal, desarrollado como parte del trabajo entregable del Módulo #2 del curso de HTML y CSS. El proyecto fue completado durante la Semana 1 del curso.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProgramaConPid/Personal-Portfolio---FM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProgramaConPid/Personal-Portfolio---FM/issues"
+  },
+  "homepage": "https://github.com/ProgramaConPid/Personal-Portfolio---FM#readme",
+  "dependencies": {
+    "mysql2": "^3.14.3"
+  }
+}
